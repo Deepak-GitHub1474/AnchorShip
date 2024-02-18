@@ -17,7 +17,7 @@ const ProjectDetails = ({handleChange, userInfo}) => {
             type="text"
             name="projectName"
             placeholder="project name"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.projectName}
           />
@@ -25,7 +25,7 @@ const ProjectDetails = ({handleChange, userInfo}) => {
             type="text"
             name="projectDescription"
             placeholder="project description"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.projectDescription}
           />
@@ -33,7 +33,7 @@ const ProjectDetails = ({handleChange, userInfo}) => {
             type="text"
             name="projectType"
             placeholder="projectType solo/group"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.projectType}
           />
@@ -41,7 +41,7 @@ const ProjectDetails = ({handleChange, userInfo}) => {
             type="text"
             name="projectLink"
             placeholder="project link"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.projectLink}
           />

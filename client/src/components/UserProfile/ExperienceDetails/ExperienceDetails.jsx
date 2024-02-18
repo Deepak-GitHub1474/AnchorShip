@@ -30,7 +30,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="text"
             name="experienceType"
             placeholder="experienceType internship/job"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.experienceType}
           />
@@ -38,7 +38,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="text"
             name="companyName"
             placeholder="company name"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.companyName}
           />
@@ -46,7 +46,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="text"
             name="companyWebsiteLink"
             placeholder="company website link"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.companyWebsiteLink}
           />
@@ -54,7 +54,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="text"
             name="role"
             placeholder="role"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.role}
           />
@@ -63,7 +63,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="date"
             name="joiningDate"
             placeholder="joining date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
             onChange={handleChange}
             value={userInfo.joiningDate}
           />
@@ -71,7 +71,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="date"
             name="leavingDate"
             placeholder="leaving date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
             onChange={handleChange}
             value={userInfo.leavingDate}
           />
@@ -83,7 +83,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             {userInfo.coverLetter && 
             <div 
               onClick={() => readPdfFile(userInfo.coverLetter)}
-              className="bg-green-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden max-w-60 min-w-60"
+              className="bg-blue-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden flex-1"
             >
               Cover Letter
             </div>}

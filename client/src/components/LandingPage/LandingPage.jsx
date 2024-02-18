@@ -88,7 +88,7 @@ const LandingPage = () => {
           <div className="flex flex-col gap-4 max-w-[95vw]">
             <h1 className="xs:text-3xl text-2xl font-bold md:text-left text-center">Success Stories</h1>
 
-            <div className="flex items-center mx-auto gap-12 p-2 overflow-x-auto max-w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <div className="flex items-center mx-auto gap-5 p-2 overflow-x-auto max-w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {SuccessStoryData.map((el) => (
                 <div
                   key={el.id}

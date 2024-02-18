@@ -132,7 +132,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
             type="text"
             name="name"
             placeholder="name"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.name}
           />
@@ -140,7 +140,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
             type="text"
             name="mobile"
             placeholder="mobile"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.mobile}
           />
@@ -148,7 +148,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
             type="text"
             name="linkedin"
             placeholder="linkedin"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.linkedin}
           />
@@ -156,7 +156,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
             type="text"
             name="github"
             placeholder="github"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.github}
           />
@@ -168,7 +168,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
             {userInfo.resume && 
             <div 
               onClick={() => readPdfFile(userInfo.resume)}
-              className="bg-green-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden max-w-60 min-w-60"
+              className="bg-blue-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden flex-1"
             >
               Resume
             </div>}

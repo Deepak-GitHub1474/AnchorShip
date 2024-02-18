@@ -17,7 +17,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
             type="text"
             name="educationFrom"
             placeholder="type (school/college)"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.educationFrom}
           />
@@ -25,7 +25,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
             type="text"
             name="collegeName"
             placeholder="college name"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent"
             onChange={handleChange}
             value={userInfo.collegeName}
           />
@@ -33,7 +33,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
             type="date"
             name="collegeStartDate"
             placeholder="college start date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
             onChange={handleChange}
             value={userInfo.collegeStartDate}
           />
@@ -41,7 +41,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
             type="date"
             name="collegeEndDate"
             placeholder="college end date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray]"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
             onChange={handleChange}
             value={userInfo.collegeEndDate}
           />
