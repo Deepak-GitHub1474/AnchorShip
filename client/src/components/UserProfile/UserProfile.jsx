@@ -149,7 +149,7 @@ const readPdfFile = async (fileName) => {
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center gap-8 py-8 px-2">
-          {!userInfo.userEmailId && <div onClick={() => updateDashBoard()} className="bg-slate-300 hover:bg-opacity-60 p-2 cursor-pointer font-semibold">Fetch Existing Information</div>}
+          {!userInfo.userEmailId && <div onClick={() => updateDashBoard()} className="bg-blue-100 hover:bg-blue-200 p-2 cursor-pointer font-semibold">Fetch Existing Information</div>}
           <form
             onSubmit={createUserProfile}
             className="flex flex-col gap-4 sm:w-[500px] w-[95vw] pb-4 pt-4 px-2 rounded-lg shadow-[0_0_2px_gray] relative overflow-hidden"

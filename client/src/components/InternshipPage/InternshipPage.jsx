@@ -27,7 +27,7 @@ const InternshipPage = () => {
         <div className="relative">
           <button 
             onClick={() => setIsAppliedListVisible(!isAppliedListVisible)}
-            className="bg-[#ee5555] hover:bg-[#e86969] w-[17rem] pl-4 pr-8 py-2 text-lg font-semibold text-white absolute top-0 left-3 flex items-center"
+            className="bg-[#ee5555] hover:bg-[#e86969] w-[15rem] pl-2 pr-6 py-2 font-semibold text-white absolute top-3 left-3 flex items-center"
           >
             <span>{!isAppliedListVisible ? "Check Applied Internships" : "Go TO Internship Page"}</span>
             <GoTriangleDown size={28} className={`transition-all duration-700 absolute right-1 top-2 text-slate-200 ${isAppliedListVisible && " rotate-180"}`}/>

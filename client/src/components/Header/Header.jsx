@@ -26,11 +26,13 @@ function Header() {
     <>
       {location.pathname !== "/register/login" && (
         <header className=" flex items-center justify-between  gap-2 pt-3 pb-12 px-3 bg-slate-100 relative">
-          <img
-            src="https://res.cloudinary.com/dlt4ash36/image/upload/v1707741622/developerstring_bn169n.png"
-            alt="logo"
-            className="w-28"
-          />
+          <Link to="/">
+            <img
+              src="https://res.cloudinary.com/dlt4ash36/image/upload/v1707741622/developerstring_bn169n.png"
+              alt="logo"
+              className="w-28 cursor-pointer"
+            />
+          </Link>
 
           <>
             {!user.email ? (
@@ -43,16 +45,8 @@ function Header() {
               <>
                 <div className="flex gap-4 items-center">
                   <Link
-                    to="/"
-                    className={`w-fit hover:bg-slate-200 p-2 font-semibold text-center ${
-                      location.pathname === "/" && "bg-slate-300"
-                    }`}
-                  >
-                    Home
-                  </Link>
-                  <Link
                     to="/profile"
-                    className={`w-fit hover:bg-slate-200 p-2 font-semibold text-center ${
+                    className={`xs:block hidden w-fit hover:bg-slate-200 p-2 font-semibold text-center ${
                       location.pathname === "/profile" && "bg-slate-300"
                     }`}
                   >
@@ -67,7 +61,7 @@ function Header() {
                     Internships
                   </Link>
                 </div>
-                <div className="dropdown dropdown-end xs:block hidden">
+                <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar w-12 h-12 rounded-full border-[1px] border-[#E97862] hover:border-2 hover:border-[#E97862] overflow-hidden cursor-pointer"
@@ -82,14 +76,14 @@ function Header() {
                     tabIndex={0}
                     className="mt-1 z-[1] p-2 menu menu-sm dropdown-content w-48 bg-blue-100 shadow rounded-box"
                   >
-                    {/* <li>
+                    <li>
                       <Link
-                        to="/account"
-                        className="justify-between font-semibold"
+                        to="/profile"
+                        className="justify-between font-semibold xs:hidden"
                       >
-                        Account
+                        Profile
                       </Link>
-                    </li> */}
+                    </li>
                     <li onClick={userLogout}>
                       <a className="font-semibold">Logout</a>
                     </li>

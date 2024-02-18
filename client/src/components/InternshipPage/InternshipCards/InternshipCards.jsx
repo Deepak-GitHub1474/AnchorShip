@@ -32,7 +32,7 @@ const InternshipCards = () => {
   return (
     <>
       {user?.email ? (
-        <div className="flex items-center justify-center flex-wrap gap-6 px-2 pt-20 pb-8">
+        <div className="flex items-center justify-center flex-wrap gap-6 px-2 pt-24 pb-8">
           {internshipData.map((internship) => (
             <div
               key={internship.internshipId}

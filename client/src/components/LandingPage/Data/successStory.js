@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         img: "",
-        increment: "90%",
+        increment: "50%",
         shortName: "DC", // Change to img
         name: "Deepak Chaudhary",
         role: "Fll Stack Developer",
@@ -14,7 +14,7 @@ export default [
     {
         id: 2,
         img: "",
-        increment: "85%",
+        increment: "55%",
         shortName: "AC", // TODO: Change to img
         name: "Aditya Chaudhary",
         role: "Java Developer",
@@ -26,7 +26,7 @@ export default [
     {
         id: 3,
         img: "",
-        increment: "85%",
+        increment: "55%",
         shortName: "VC", // Change to img
         name: "Vishal Chaudhary",
         role: "Data Scientist",

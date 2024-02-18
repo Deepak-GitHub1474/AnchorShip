@@ -5,7 +5,6 @@ import UserProfile from "./components/UserProfile/UserProfile"
 import Register from "./components/RegisterLogin/RegisterLogin"
 import InternshipPage from "./components/InternshipPage/InternshipPage"
 import PageNotFound from "./components/PageNotFound/PageNotFound"
-import AppliedInternshipList from "./components/InternshipPage/AppliedInternshipList/AppliedInternshipList"
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
         <Route path="/register/login" element={<Register />} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/internship" element={<InternshipPage />} />
-        <Route path="/internship/list" element={<AppliedInternshipList />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

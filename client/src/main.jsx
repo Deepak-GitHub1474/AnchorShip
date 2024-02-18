@@ -3,11 +3,13 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ContextProvider } from "./context/context.jsx";
+import { Toaster } from 'react-hot-toast'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <ContextProvider>
       <App />
+      <Toaster />
     </ContextProvider>
   </BrowserRouter>
 );
