@@ -109,14 +109,14 @@ const RegisterLogin = () => {
   return (
     <>
       {!user.email ? (
-        <div className="min-h-screen flex items-center justify-center px-2 overflow-hidden bg-white">
+        <div className="xl:min-h-screen flex items-center justify-center px-2 overflow-hidden bg-white">
           <img
             src="https://res.cloudinary.com/dlt4ash36/image/upload/v1707731235/signin-banner_ut0tkk.svg"
             alt="bg-img"
             className="h-[100vh] xl:flex hidden fixed top-0 translate -translate-x-[22%]"
           />
 
-          <div className="flex flex-col gap-4 sm:w-[500px] w-[95vw] py-4 px-2 rounded-lg xl:absolute xl:right-4 xl:top-8 relative z-50">
+          <div className="flex flex-col gap-4 sm:w-[500px] w-[95vw] py-10 px-2 rounded-lg xl:absolute xl:right-4 top-8 relative z-50">
             {!isOtpVerified ? (
               <>
                 <img
@@ -124,7 +124,7 @@ const RegisterLogin = () => {
                   alt="logo"
                   className="w-44"
                 />
-                <h1 className="text-center font-bold text-2xl">
+                <h1 className="text-center font-bold text-2xl text-gray-950">
                   Get Onboard and jumpstart your career!
                 </h1>
                 <p className="text-center text-slate-500">
@@ -146,7 +146,7 @@ const RegisterLogin = () => {
               </>
             ) : (
               <>
-                <button onClick={handleBack} className="fixed top-4 xl:0 left-4 flex items-center opacity-60 hover:opacity-100">
+                <button onClick={handleBack} className="fixed top-6 left-6 flex items-center opacity-60 hover:opacity-100">
                   <span className=" font-bold text-3xl mb-1">←</span>
                   <span>Back</span>
                 </button>
@@ -155,14 +155,14 @@ const RegisterLogin = () => {
                   alt="logo"
                   className="w-44"
                 />
-                <h1 className="text-center font-bold text-2xl">
+                <h1 className="text-center font-bold text-2xl text-gray-950">
                   Just One More Step
                 </h1>
                 <p className="text-center text-slate-500">
                   Please enter the OTP sent to your email
                 </p>
                 <div className="text-center flex items-center justify-center gap-4">
-                  <span className="font-semibold">{email}</span>
+                  <span className="font-semibold text-gray-950">{email}</span>
                   <span className="text-[#ee5555] text-xl">
                     <MdMarkEmailRead />
                   </span>

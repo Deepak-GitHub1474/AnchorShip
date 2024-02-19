@@ -22,7 +22,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
     <>
       {user?.email ? (
         <>
-          <h1 className="text-center font-bold text-2xl text-blue-500 mb-2">
+          <h1 className="text-center font-bold xs:text-2xl text-xl text-blue-500 mb-2">
             Past Experience details
           </h1>
 
@@ -63,7 +63,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="date"
             name="joiningDate"
             placeholder="joining date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent w-full"
             onChange={handleChange}
             value={userInfo.joiningDate}
           />
@@ -71,7 +71,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             type="date"
             name="leavingDate"
             placeholder="leaving date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent w-full"
             onChange={handleChange}
             value={userInfo.leavingDate}
           />
@@ -83,7 +83,7 @@ const ExperienceDetails = ({ userInfo, setUserInfo, handleChange, readPdfFile, f
             {userInfo.coverLetter && 
             <div 
               onClick={() => readPdfFile(userInfo.coverLetter)}
-              className="bg-blue-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden flex-1"
+              className="absolute right-1 bg-blue-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden flex-1"
             >
               Cover Letter
             </div>}

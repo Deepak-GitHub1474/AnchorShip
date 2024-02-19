@@ -9,7 +9,7 @@ const ProjectDetails = ({handleChange, userInfo}) => {
     <>
       {user?.email ? (
         <>
-          <h1 className="text-center font-bold text-2xl text-blue-500 mb-2">
+          <h1 className="text-center font-bold xs:text-2xl text-xl text-blue-500 mb-2">
             Project Details
           </h1>
 

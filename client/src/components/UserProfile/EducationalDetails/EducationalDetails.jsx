@@ -9,7 +9,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
     <>
       {user?.email ? (
         <>
-          <h1 className="text-center font-bold text-2xl text-blue-500 mb-2">
+          <h1 className="text-center font-bold xs:text-2xl text-xl text-blue-500 mb-2">
             Educational Details
           </h1>
 
@@ -33,7 +33,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
             type="date"
             name="collegeStartDate"
             placeholder="college start date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent w-full"
             onChange={handleChange}
             value={userInfo.collegeStartDate}
           />
@@ -41,7 +41,7 @@ const EducationalDetails = ({handleChange, userInfo}) => {
             type="date"
             name="collegeEndDate"
             placeholder="college end date"
-            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent flex-1"
+            className="p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] bg-transparent w-full"
             onChange={handleChange}
             value={userInfo.collegeEndDate}
           />

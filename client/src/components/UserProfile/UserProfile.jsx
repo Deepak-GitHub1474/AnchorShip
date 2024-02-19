@@ -3,6 +3,7 @@ import { BASE_URL } from "../../config/config";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 import PersonalDetails from "./PersonalDetails/PersonalDetails";
 import EducationalDetails from "./EducationalDetails/EducationalDetails";
@@ -96,9 +97,9 @@ const UserProfile = () => {
         userData,
         {headers: {"Content-Type": "multipart/form-data",},}
       );
-      alert(res.data.responseMsg);
+      toast.success(res.data.responseMsg);
     } catch (err) {
-      alert(err.data.responseMsg);
+      toast.error(err.data.responseMsg);
     }
   };
 
@@ -154,7 +155,7 @@ const readPdfFile = async (fileName) => {
             onSubmit={createUserProfile}
             className="flex flex-col gap-4 sm:w-[500px] w-[95vw] pb-4 pt-4 px-2 rounded-lg shadow-[0_0_2px_gray] relative overflow-hidden"
           >
-            <div className="bg-[#ee5555] absolute top-0 left-0 right-0 p-2 text-2xl text-white font-semibold flex items-center justify-center gap-4">
+            <div className="bg-[#ee5555] absolute top-0 left-0 right-0 p-2 xs:text-2xl text-xl text-white font-semibold text-center gap-4">
               Create Profile To Earn Coins
             </div>
             <PersonalDetails

@@ -3,6 +3,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
 import axios from "axios";
+import toast from "react-hot-toast";
 import { Navigate } from "react-router-dom";
 import { BASE_URL } from "../../../config/config";
 import { useJob } from "../../../context/context";
@@ -45,7 +46,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
           setCoins((prevCoins) => prevCoins + 10);
           setFileUploaded((prevState) => ({ ...prevState, avatar: true }));
         }
-        alert("Image uploaded Succesfully");
+        toast.success("Image uploaded Succesfully");
       })
       .then(() => setLoading(false))
       .catch((err) => console.log("catch uploadAvatar", err.message));
@@ -72,7 +73,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
     }
   }
 
-  // // Read PDF
+    // // Read PDF
   //  const readPdfFile = async (fileName) => {
   //   try {
   //     const response = await axios.get(`${BASE_URL}/files/${fileName}`, {
@@ -91,7 +92,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
     <>
       {user?.email ? (
         <>
-          <h1 className="text-center font-bold text-2xl text-blue-500 mt-10">
+          <h1 className="text-center font-bold xs:text-2xl text-xl text-blue-500 mt-10">
             Personal Details
           </h1>
           <label
@@ -168,7 +169,7 @@ const PersonalDetails = ({userInfo, setUserInfo, handleChange, readPdfFile, file
             {userInfo.resume && 
             <div 
               onClick={() => readPdfFile(userInfo.resume)}
-              className="bg-blue-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden flex-1"
+              className="absolute right-1 bg-blue-100 hover:bg-opacity-60 cursor-pointer p-3 rounded-md border-none outline-none shadow-[0_0_1px_gray] whitespace-nowrap text-ellipsis overflow-hidden flex-1"
             >
               Resume
             </div>}
