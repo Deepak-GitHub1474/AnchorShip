@@ -109,7 +109,7 @@ const RegisterLogin = () => {
   return (
     <>
       {!user.email ? (
-        <div className="xl:min-h-screen flex items-center justify-center px-2 overflow-hidden bg-white">
+        <div className="min-h-[80vh] flex items-center justify-center px-2 overflow-hidden bg-white">
           <img
             src="https://res.cloudinary.com/dlt4ash36/image/upload/v1707731235/signin-banner_ut0tkk.svg"
             alt="bg-img"
@@ -172,7 +172,8 @@ const RegisterLogin = () => {
                     <input
                       key={index}
                       ref={(el) => (otpInputs.current[index] = el)}
-                      type="text"
+                      type="password"
+                      inputMode="numeric"
                       name="otp"
                       className="max-w-12 text-center py-3 px-1 rounded-md border-none outline-none shadow-[0_0_2px_gray] bg-transparent"
                       value={userOtp[index] || ""}
