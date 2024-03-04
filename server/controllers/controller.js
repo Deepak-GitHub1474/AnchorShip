@@ -312,3 +312,100 @@ exports.readPdfFile = (req, res) => {
     }
   });
 }
+
+
+//--------------------+------------------+----------------------//
+
+const { google } = require('googleapis');
+const path = require('path');
+const fs = require('fs');
+
+const CLIENT_ID = '338710380911-al9mjkjm5k7oas586efpcmm3evucvttn.apps.googleusercontent.com';
+const CLIENT_SECRET = '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';
+const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
+
+const REFRESH_TOKEN = '1//049U1Ms0qM3TKCgYIARAAGAQSNwF-L9IrmM0IBHMBVjpQuk5x-doopuXREdjtPInA5rsmQGxj-1pht7I1TfSybNi9NDwq1oWAbfQ';
+
+const oauth2Client = new google.auth.OAuth2(
+  CLIENT_ID,
+  CLIENT_SECRET,
+  REDIRECT_URI
+);
+
+oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+const drive = google.drive({
+  version: 'v3',
+  auth: oauth2Client,
+});
+
+/* 
+filepath which needs to be uploaded
+Note: Assumes example.jpg file is in root directory, 
+though this can be any filePath
+*/
+
+const filePath = path.join(__dirname, '../drivefiles/deepak.png');
+
+async function uploadFile() {
+  try {
+    const response = await drive.files.create({
+      requestBody: {
+        name: Date.now(), //This can be name of your choice
+        mimeType: 'image/png',
+      },
+      media: {
+        mimeType: 'image/png',
+        body: fs.createReadStream(filePath),
+      },
+    });
+
+    console.log(response.data);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+// uploadFile();
+
+async function deleteFile() {
+  try {
+    const response = await drive.files.delete({
+      fileId: '1e_TlZ-RrP7h_QAu0SlsBz7IW-jhrgLP3',
+    });
+    console.log(response.data, response.status); // 204
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+// deleteFile(); 
+
+async function generatePublicUrl() {
+  try {
+    const fileId = '1_TmeXsogYFp8A-Zv56upFIPrkFyWV-P3';
+    await drive.permissions.create({
+      fileId: fileId,
+      requestBody: {
+        role: 'reader',
+        type: 'anyone',
+      },
+    });
+
+    /* 
+    webViewLink: View the file in browser
+    webContentLink: Direct download link 
+    */
+    const result = await drive.files.get({
+      fileId: fileId,
+      fields: 'webViewLink, webContentLink',
+    });
+    console.log(result.data);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+// generatePublicUrl()
+
+//--------------------+--------SMS OTP Verification----------+----------------------//
