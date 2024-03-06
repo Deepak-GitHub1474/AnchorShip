@@ -47,7 +47,7 @@ async function uploadFile() {
     }
 }
 
-// UploadFile();
+// uploadFile();
 async function deleteFile() {
     try {
         const response = await drive.files.delete({
@@ -59,7 +59,7 @@ async function deleteFile() {
     }
 }
 
-// DeleteFile(); 
+// deleteFile(); 
 async function generatePublicUrl() {
     try {
         const fileId = "1_TmeXsogYFp8A-Zv56upFIPrkFyWV-P3";
