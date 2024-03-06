@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-// Register Validation
+// Register Validation Using Gmail
 exports.sendOtpValidation = (req, res, next) => {
     const {email} = req.body;
 
@@ -11,8 +11,30 @@ exports.sendOtpValidation = (req, res, next) => {
     }
 }
 
-// OTP Validation
+// OTP Validation Of Gmail
 exports.otpValidation = (req, res, next) => {
+    const { userOtp } = req.body;
+
+    if (userOtp) {
+        next()
+    } else {
+        res.status(404).send({ responseMsg: "OTP is required" });
+    }
+}
+
+// Register Validation Using Phone Number
+exports.sendPhoneOTPValidation = (req, res, next) => {
+    const {phoneNumber} = req.body;
+
+    if (phoneNumber) {
+        next()
+    } else {
+        res.status(404).send({ responseMsg: "Phone number is required" });
+    }
+}
+
+// OTP Validation Of Phone Number
+exports.verifyPhoneOTPValidation = (req, res, next) => {
     const { userOtp } = req.body;
 
     if (userOtp) {

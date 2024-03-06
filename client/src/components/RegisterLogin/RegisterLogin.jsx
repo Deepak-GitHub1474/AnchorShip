@@ -1,10 +1,13 @@
+import Phone from "../Phone_OTP_Verification/Phone";
+
 import { BASE_URL } from "../../config/config";
+import { useJob } from "../../context/context";
+
 import { MdMarkEmailRead } from "react-icons/md";
 
 import { useState, useRef, useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
-import { useJob } from "../../context/context";
 import toast from "react-hot-toast";
 
 const RegisterLogin = () => {
@@ -143,6 +146,8 @@ const RegisterLogin = () => {
                 >
                   {!isLoading ? "Send OTP" : "Sending OTP..."}
                 </button>
+
+                <Phone />
               </>
             ) : (
               <>

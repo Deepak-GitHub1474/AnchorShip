@@ -13,7 +13,12 @@ const {
     readPdfFile,
 } = require("../controllers/controller");
 
-const { sendOtpValidation, otpValidation, verifyUser } = require("../middlewares/user-validation");
+const {
+    sendPhoneOTP,
+    verifyPhoneOTP,
+} = require("../controllers/phone_otp_verification");
+
+const { sendOtpValidation, otpValidation, sendPhoneOTPValidation, verifyPhoneOTPValidation, verifyUser } = require("../middlewares/user-validation");
 const { handlePdfUpload} = require("../middlewares/file-upload");
 
 const route = express.Router();
@@ -26,6 +31,12 @@ route.post("/sendotp", sendOtpValidation, sendOtp);
 
 // OTP Validation & Login/Register
 route.post("/verifyOtp/register", otpValidation, verifyOtpAndRegister);
+
+// Phone otp 
+route.post("/phone/send-otp", sendPhoneOTPValidation, sendPhoneOTP);
+
+// Phone otp verification
+route.post("/phone/verify-otp", verifyPhoneOTPValidation, verifyPhoneOTP);
 
 // User Logout
 route.get("/logout", UserLogout);

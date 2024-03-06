@@ -27,7 +27,7 @@ export const ContextProvider = ({children}) => {
             setUser(response.data);
             setIsLogged(true);
           } catch (err) {
-            console.log(err); // Error log if not logged in
+            // console.log(err); // Error log if not logged in
             setIsLogged(true);
           }
         };
