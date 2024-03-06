@@ -147,7 +147,7 @@ const RegisterLogin = () => {
                   {!isLoading ? "Send OTP" : "Sending OTP..."}
                 </button>
 
-                <Phone />
+                {/* <Phone /> */}
               </>
             ) : (
               <>
